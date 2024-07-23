@@ -1,0 +1,18 @@
+{
+  "name": "instagramapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:pro": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "author": "Aryanatta P.T",
+  "license": "ISC",
+  "description": "Instagram API",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "instagram-private-api": "^1.46.1"
+  }
+}

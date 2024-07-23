@@ -1,0 +1,24 @@
+services:
+  instagramapi:
+    image: instagramapi:latest
+    container_name: instagramapi
+    build:
+      context: . # Use an image built from the specified dockerfile in the current directory.
+      dockerfile: Dockerfile
+      args:
+        DOCKER_BUILDKIT: 0
+    ports:
+      - "30002:30002"
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 64M
+    networks:
+        - aryanattapt-network
+
+networks:
+  aryanattapt-network:
+    name: aryanattapt-network
+    external: true
